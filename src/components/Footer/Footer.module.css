@@ -1,0 +1,28 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color:#b0d6d3;
+    padding: 2em;
+
+}
+
+#footer_links{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5em;
+    border-left: 1px solid;
+}
+
+#footer_logo{
+    padding-right: 5em;
+}
+
+@media only screen and (max-width: 900px) {
+    #footer_links{
+        display: none;
+    }
+    #footer_logo{
+        padding-right: 0;
+
+    }
+}

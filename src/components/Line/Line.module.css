@@ -1,0 +1,10 @@
+.divisor_flex {
+  display: flex;
+  justify-content: center;
+}
+.raya {
+  width: 310px;
+  height: 6px;
+  background-image: linear-gradient(to right, #94d9d3, #f5baa6, #a2b6b4);
+  border-radius: 5em;
+}

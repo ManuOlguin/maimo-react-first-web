@@ -1,0 +1,23 @@
+#form_contacto{
+    width: 70vw;
+    background-color:#E2704B;
+    padding: 2em;
+    margin-top: 1em;
+    border-radius: 0 10em 0 0;
+    color: white;
+}
+
+#form_contacto input{
+    border-radius: 2em;
+    padding: 0.5em;
+    margin-top: 1em;
+
+}
+
+#form_contacto button{
+    border-radius: 2em;
+    padding: 0.5em;
+    margin-top: 1em;
+    margin-left: 0.5em;
+
+}
