@@ -8,13 +8,15 @@
   
 .cardDiv{
     width: 626px;
-    height: 382px;
+    height: 400px;
     border-radius: 40px;
     margin: 1em 0;
-  
+    position: relative;
+    transition: 1s;
   }
   .cardSolucion{
-    padding: 58px 35px 58px 67px;
+    padding: 58px 35px 67px 67px;
+    transition: 1s;
     
   }
   .cardSolucion div {
@@ -25,7 +27,31 @@
     text-align: center;
     vertical-align: bottom;
     margin-bottom: 2em;
+    transition: 0.3s;
   }
+
+  .uls{
+    margin-top: 2em;
+    margin-left: 2em;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition: opacity 0.5s;
+  }
+  
+
+  .ulsli{
+    width: 25em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ulsli li{
+    padding: 7px;
+    flex-grow: 1;
+    padding-right: 1.4em;
+
+  }
+  
   .cardSolucion div i{
     font-size: 63px;
     line-height: 108px;
@@ -33,23 +59,40 @@
   }
   
   .cardSolucion h4{
+    position: absolute;
+    top: 190px;
     font-size: 24px;
     font-weight: 500;
     color: white;
+    transition: all 1s ease;
   
   }
   .cardSolucion p{
+    position: absolute;
+    top: 230px;
     font-size: 22px;
     color: white;
     width: 470px;
+    transition: 1s;
   
   }
   .iconoCard{
-    font-size: 63px;
-    line-height: 108px;
+    font-size: 55px;
+    line-height: 200px;
     color: white;
-    margin-top: 0.34em;
+    margin-top: 0.45em;
+    margin-left: 0.04em;
 
+
+  }
+  .btnCard{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 1em 2em;
+    background-color: #ffffff;
+    border-radius: 40px;
+    font-weight: 500;
   }
 
   .iconoCard path{
@@ -57,18 +100,120 @@
     line-height: 108px;
   }
 
-  @media (max-width: 700px) {
+  .isOpen{
+    width: 100%;
+
+  }
+  .isOpen .cardSolucion {
+    height: auto;
+  }
+
+  .isOpen .cardSolucion h4{
+    position: absolute;
+    top: 35px;
+    font-size: 1.75em;
+    left: 50%;
+    transform: translate(-50%, 0%); 
+  }
+
+  
+  .isOpen .cardSolucion p{
+    top: 90px;
+    right: 35px;
+    text-align: right;
+    width: 700px;
+  }
+
+  .isOpen div article{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transition-delay: 1s;
+    transition: opacity 1s;
+
+  }
+  .isOpen div article{
+    opacity: 1;
+  }
+
+
+
+  .isOpen .cardSolucion{
+    padding: 35px 35px 58px 35px;
+    
+  }
+
+  @media (max-width: 1100px) {
+    .isOpen .cardSolucion p{
+      display: none;
+    }
+    
+  }
+  @media (max-width: 800px) {
+
+    .uls{
+      margin-left: 1.2em;
+    }
+
+    .cardSolucion p{
+      position: relative;
+      top: auto;
+      margin-top: 1em;
+      font-size: 20px !important;
+    }
+    .btnCard{
+      display: none;
+    }
+    .ulsli{
+      width: 100%;
+    }
+    .cardSolucion h4{
+      position: relative;
+      left: auto;
+      top:auto ;
+      transform: none;
+      font-size: 24px;
+      width: auto;
+    }
+    .isOpen .cardSolucion h4{
+      position: relative;
+      left: auto;
+      top:auto ;
+      font-size: 1.75em;
+      transform: none; 
+    }
+
+
+     .cardSolucion div {
+      height: 67px;
+      width: 67px;
+      margin-bottom: 3em;
+      margin-top: 1em;
+      display: none;
+      
+    }
+    .isOpen .cardSolucion div svg{
+      font-size: 35px;
+    }
     .cardDiv{
-      width: 90vw;
+      width: 100%;
+
+    }
+    .cardDiv.isOpen{
       height: auto;
       border-radius: 40px;
+      transition: 1s;
     
     }
     .cardSolucion p{
       font-size: 22px;
       color: white;
-      width: 90%;
+      width: 9em;
     
+    }
+    .isOpen div article{
+      flex-direction: column;
+      justify-content:space-evenly;
     }
       
   }

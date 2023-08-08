@@ -8,8 +8,8 @@ const Form = () => {
     <h2>Contactanos</h2> 
     <input type="text" placeholder="Nombre"/>
     <input type="email" placeholder="Email"/>
-    <input type="text" placeholder="Tu mensaje"/>
-    <button type="submit" class="btn btn-light">Submit</button>
+    <textarea id={styles.message} type="text" placeholder="Tu mensaje"/>
+    <button type="submit" class="btn btn-light">Enviar</button>
 </form>
 </section>
 

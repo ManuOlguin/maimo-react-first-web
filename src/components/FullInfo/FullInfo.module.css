@@ -66,6 +66,7 @@ canvas {
 
 }
 #botones_tgroup{
+  display: flex;
   justify-content:center;
   margin-top: 2em;
 }
@@ -80,16 +81,18 @@ canvas {
 #quienes_somos h5{
   font-size: 28px;
   font-weight: 500;
-  color: #E2704B;
+  color: #CECACA;
 
 }
 #quienes_somos a div{
   margin-top: 1em;
+  width: 44vw;
+
   height: 9px;
   font-size: 9px;
-  background-color: #E2704B;
+  background-color: #CECACA;
   border-radius: 30px;
-  color: #E2704B;
+  color: #CECACA;
 }
 
 #quienes_somos a{
@@ -154,7 +157,6 @@ canvas {
   justify-content: center;
   margin-top: 2.5em;
   color: #292A3B;
-  height: 20em;
   position: relative;
 }
 
@@ -180,7 +182,7 @@ canvas {
   position: absolute;
   bottom: 0;
   right: 3em;
-
+  transition: 0.5s;
 }
 
 #circulo2
@@ -193,22 +195,113 @@ canvas {
   position: absolute;
   bottom: 2.5em;
   right: 1em;
+  transition: 0.5s;
+
 
 }
-
-#textoInfo2{
-  animation: entrada 1s ease-in;
-  animation-play-state: paused;
+#textoInfo1[desaparecer="true"] {
   display: none;
-  animation-fill-mode: forwards;
+}
+#textoInfo2[desaparecer="true"] {
+  display: none;
+
 }
 
-#textoInfo1{
-  animation: entrada2 1s ease-in;
-  animation-play-state: paused;
+#textoInfo2[active="true"] {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeInFromSide 1s ease forwards;
   display: block;
-  animation-fill-mode: forwards;
 }
+
+#textoInfo1[active="true"] {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: fadeInFromSide 1s ease forwards;
+  display: block;
+
+}
+#textoInfo1[active="false"] {
+  opacity: 1;
+  transform: translateX(0);
+  animation: fadeOutToSide2 1s ease forwards;
+}
+
+#textoInfo2[active="true"] {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeInFromSide 1s ease forwards;
+}
+#textoInfo2[active="false"] {
+  opacity: 1;
+  transform: translateX(0);
+  animation: fadeOutToSide 1s ease forwards;
+}
+@keyframes desaparecer {
+  to {
+    display: none !important;
+  }
+}
+
+@keyframes fadeInFromSide {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutToSide {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeOutToSide2 {
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+#infoActive1[active="1"] div {
+  background-color: #E2704B;
+  color: #E2704B;
+}
+
+#infoActive2[active="2"] div {
+  background-color: #34AEA4;
+  color: #34AEA4;
+}
+#infoActive1[active="1"] h5 {
+  color: #E2704B;
+}
+
+#infoActive2[active="2"] h5 {
+  color: #34AEA4;
+}
+
+#quienes_somos a{
+  text-decoration: none;
+}
+
+#circulo1[active="2"] {
+  height: 27px;
+  width: 27px;
+  bottom: 2.5em;
+  right: 1em;
+
+}
+
+#circulo2[active="2"] {
+  height: 33px;
+  width: 33px;
+  bottom: 0;
+  right: 3em;
+
+}
+
+
 @media only screen and (max-width: 900px) {
   #loading_tgroup {
     display: none;
@@ -221,12 +314,35 @@ canvas {
     margin-bottom: 2em;
 
   }
+  #botones_tgroup{
+    justify-content:left;
+    flex-direction: column;
+    margin-top: 2em;
+  }
   #textoInfo{
     margin-top: 1em;
-    height: auto;
     font-size: 20px;
 
   }
+  #quienes_somos, #socios_estrategicos{
+    margin-left: 0;
+  }
+
+  #quienes_somos a, #socios_estrategicos a {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    margin-bottom: 1em;
+    
+  }
+  #socios_estrategicos a div, #quienes_somos a div{
+    margin-top: 0;
+    width: 10px;
+    height: 50px;
+    margin-right: 1em;
+  }
+  
+
   #textoInfo p{
     width: 75vw;
     font-size: 20px;
@@ -245,3 +361,12 @@ canvas {
 }
 }
 
+@media only screen and (max-width: 350px) {
+  #socios_estrategicos a div, #quienes_somos a div{
+    margin-top: 0;
+    width: 10px;
+    height: 80px;
+    margin-right: 1em;
+  }
+  
+}

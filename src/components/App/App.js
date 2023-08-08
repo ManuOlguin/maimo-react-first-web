@@ -6,21 +6,20 @@ import CardsContainer from '../CardsContainer/CardsContainer';
 import Line from '../Line/Line';
 import Line2 from '../Line2/Line2';
 import FullInfo from '../FullInfo/FullInfo';
-import Form from '../Form/Form';
+import LastSections from '../LastSections/LastSections';
 
 
 
 const App = () => {
   return (
-    <div className='App'>
+    <div className='App' styles="overflow-x: hidden;">
       <Header />
       <Hero />
       <Line />
       <CardsContainer />
       <Line2 />
       <FullInfo />
-      <Form />
-
+      <LastSections />
       <Footer />
     </div>
   );

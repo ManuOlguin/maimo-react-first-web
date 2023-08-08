@@ -1,23 +1,76 @@
 #form_contacto{
-    width: 70vw;
+    width: 550px;
     background-color:#E2704B;
     padding: 2em;
-    margin-top: 1em;
-    border-radius: 0 10em 0 0;
+    margin-top: 3em;
+    border-radius: 0 5em 0 0;
     color: white;
+    transition: 1s;
+}
+#form_contacto h2{
+    color: white;
+    font-weight: 500;
 }
 
 #form_contacto input{
     border-radius: 2em;
     padding: 0.5em;
+    margin: 0.25em;
     margin-top: 1em;
+    margin-bottom: 0;
+    width: 180px;
+    border: none;
+
 
 }
 
 #form_contacto button{
+    border: none;
     border-radius: 2em;
     padding: 0.5em;
     margin-top: 1em;
     margin-left: 0.5em;
+    width: 400px !important;
 
+
+}
+
+#form_contacto textarea{
+    width: 380px !important;
+    height: 120px;
+    border-radius: 2em;
+    padding: 0.75em;
+    margin: 0.25em;
+    margin-top: 1em;
+    margin-bottom: 0;
+    border: none;
+
+}
+
+@media only screen and (max-width: 600px) {
+    #form_contacto textarea{
+        width: 80% !important;
+    }
+    #form_contacto button{
+        width: 88% !important;
+    }
+    #form_contacto input{
+        width: 80% !important;
+    }
+    #form_contacto{
+        width: 70vw;}
+}
+@media only screen and (max-width: 1200px) {
+    #form_contacto {
+        border-radius: 0 6em 6em 0;
+        padding-bottom: 3em;
+
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #form_contacto{
+        border-radius: 0 6em 6em 0;
+        width: 70%;
+        }
 }

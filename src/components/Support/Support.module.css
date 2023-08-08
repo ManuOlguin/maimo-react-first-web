@@ -1,0 +1,145 @@
+#support{
+    width: 550px;
+    background-color:#34AEA4;
+    padding: 2em;
+    margin-top: 3em;
+    border-radius: 5em 0 0 0;
+    color: white;
+    transition: 1s;
+    padding-left: 3em;
+    padding-right: 1.25em;
+
+}
+
+#support article{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2em;
+}
+
+#support article a{
+    background-color: blueviolet;
+    text-align: center;
+    padding: 1.2em;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+#support h2{
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1em;
+
+    color: white;
+}
+
+#support h4{
+    font-size: 18px;
+    color: rgb(241, 241, 241);
+
+
+}
+
+.textos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.textos p{
+    width: 50%;
+    margin-right: 0.2em;
+    color: rgb(237, 237, 237);
+}
+.textos p a{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+.textos p span{
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 40px;
+}
+
+#primerTexto{
+    margin-right: 2em;
+    color: white;
+
+}
+
+bold{
+    font-weight: 500;
+    color: rgb(219, 219, 219);
+}
+
+#segundoTexto{
+    color: rgb(219, 219, 219);
+}
+
+#segundoTexto span{
+    color: rgb(232, 232, 232);
+}
+
+@media only screen and (max-width: 1200px) {
+    #support{
+        border-radius: 6em 0 0 6em;
+        margin-left: auto; /* Pushes the <Support> element to the right */
+        }
+}
+
+@media only screen and (max-width: 700px) {
+    #support{
+        border-radius: 5em 0 0 5em;
+        width: 70%;
+        }
+    .textos{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #primerTexto{
+        margin-bottom: 1.5em;
+        margin-right: 0;
+
+    }
+    .textos p {
+        width: 260px;
+    }
+    #support article a{
+        margin-left: 2em;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    #support article{
+        flex-direction: column;
+    }
+    #support article a{
+        margin-top: 1em;
+        max-width: 200px;
+        margin-left: 0;
+        border-radius: 35px;
+    }
+    .textos{
+        margin-bottom: 1em;
+    }
+
+    .textos p {
+        width: 100%;
+    }
+    .textos p span{
+        font-size: 16px;
+        line-height: 30px;
+
+    }
+    #support article a{
+        width: 100%;
+        font-size: 14px;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+
+    }
+}
