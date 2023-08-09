@@ -3,7 +3,7 @@ import styles from "./Line.module.css";
 
 const Line = () => {
   return (
-    <div className={styles.divisor_flex}>
+    <div className={styles.divisorflex}>
       <div className={styles.raya}></div>
     </div>
   );
