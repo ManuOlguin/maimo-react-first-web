@@ -3,9 +3,9 @@ import styles from "./Line.module.css";
 
 const Line = () => {
   return (
-    <div className={styles.divisorflex}>
+    <section className={styles.divisorflex}>
       <div className={styles.raya}></div>
-    </div>
+    </section>
   );
 };
 
