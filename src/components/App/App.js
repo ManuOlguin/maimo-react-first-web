@@ -7,6 +7,7 @@ import Line from '../Line/Line';
 import Line2 from '../Line2/Line2';
 import FullInfo from '../FullInfo/FullInfo';
 import LastSections from '../LastSections/LastSections';
+import { Element } from 'react-scroll';
 
 
 
@@ -16,10 +17,16 @@ const App = () => {
       <Header />
       <Hero />
       <Line />
-      <CardsContainer />
+      <Element name="cardsContainer" className="element">
+        <CardsContainer />
+      </Element>
       <Line2 />
-      <FullInfo />
-      <LastSections />
+      <Element name="fullInfo" className="element">
+        <FullInfo />
+      </Element>
+      <Element name="lastSections" className="element">
+        <LastSections />
+      </Element>
       <Footer />
     </div>
   );

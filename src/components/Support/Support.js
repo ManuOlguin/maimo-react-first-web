@@ -9,7 +9,7 @@ const Support = () => {
         <h4>¿Ya sos cliente?</h4>
         <h2>SOPORTE</h2>
       </div>
-      <a href='https://download.teamviewer.com/download/version_10x/TeamViewerQS.exe'> Descargar Soporte Remoto</a>
+      <a href='https://download.teamviewer.com/download/TeamViewerQS.exe'> Descargar Soporte Remoto</a>
 
     </article>
     <div className={styles.textos}>

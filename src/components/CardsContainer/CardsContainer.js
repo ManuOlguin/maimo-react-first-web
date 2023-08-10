@@ -81,12 +81,12 @@ const data = [
     color: styles.verde,
     isOpen: false,
     parrOpen: [
-      "Administración de fórmulas por artículo con procesos, subprocesos",
-      "Estimaciones de planes de producción en función de ventas",
-      "Planes de Producción",
-      "Programaciones y partes",
-      "Necesidad de Materia Prima para compras",
-      "Trazabilidad"
+      "Uso de múltiples razones sociales",
+      "Módulo de vacaciones",
+      "Liquidaciones finales",
+      "Integración impositiva",
+      "Control de horarios",
+      "Integración ERP Itris"
     ]
   },
   {
@@ -96,12 +96,10 @@ const data = [
     color: styles.gris,
     isOpen: false,
     parrOpen: [
-      "Administración de fórmulas por artículo con procesos, subprocesos",
-      "Estimaciones de planes de producción en función de ventas",
-      "Planes de Producción",
-      "Programaciones y partes",
-      "Necesidad de Materia Prima para compras",
-      "Trazabilidad"
+      "Capacitaciones remotas al personal",
+      "Capacitaciones en planta al personal",
+      "Análisis de circuitos de trabajos",
+      "Definiciones de nuevos procesos"
     ]
   },
   {
@@ -111,12 +109,11 @@ const data = [
     color: styles.azul,
     isOpen: false,
     parrOpen: [
-      "Administración de fórmulas por artículo con procesos, subprocesos",
-      "Estimaciones de planes de producción en función de ventas",
-      "Planes de Producción",
-      "Programaciones y partes",
-      "Necesidad de Materia Prima para compras",
-      "Trazabilidad"
+      "Servicio de migración de datos",
+      "Diseño de informes a medida",
+      "Diseño de impresiones a medida",
+      "Integración con tiendas de ecommerce",
+      "Integración con otros sistemas de gestión y/o informáticos"
     ]
   }
 ];

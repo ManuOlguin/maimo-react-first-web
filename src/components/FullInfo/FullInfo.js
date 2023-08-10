@@ -19,7 +19,7 @@ const FullInfo = () => {
   const [infoActive, setInfoActive] = useState(1);
   const [active1, setActive1] = useState(true);
   const [active2, setActive2] = useState(false);
-  const [desaparecer1, setDesaparecer1] = useState(false);
+  const [desaparecer1, setDesaparecer1] = useState(true);
   const [desaparecer2, setDesaparecer2] = useState(true);
 
 let wawa = 1;
@@ -107,13 +107,14 @@ let wawa = 1;
         </div>
       </section>
       <div id={styles.textoInfo}>
-        <p id={styles.textoInfo1} className={styles.textosInfos} desaparecer={desaparecer1.toString()} active={active1.toString()}>Tgroup es un equipo interdisciplinario especializado en el asesoramiento a empresas ofreciendo las mejores soluciones de sistemas de gestión disponibles en el mercado. Contamos con desarrolladores, programadores y especialistas en integración de herramientas web y demas soluciones para todo tipo de empresas y rubros.
+        <p id={styles.textoInfo1} className={styles.textosInfos} desaparecer={desaparecer1.toString()} active={active1.toString()}>TGroup es un equipo interdisciplinario especializado en el asesoramiento a empresas ofreciendo las mejores soluciones de sistemas de gestión disponibles en el mercado. Contamos con desarrolladores, programadores y especialistas en integración de herramientas web y demás soluciones para todo tipo de empresas y rubros.
         </p>
-        <p id={styles.textoInfo2} className={styles.textosInfos} desaparecer={desaparecer2.toString()} active={active2.toString()}>Dentro de las soluciones que ofrecemos nuestro principal proveedor de licencias y partner es Cia. General de Sofware SRL con su linea de productos <span>ITRIS SOFWARE.</span>
+        <p id={styles.textoInfo2} className={styles.textosInfos} desaparecer={desaparecer2.toString()} active={active2.toString()}>Dentro de las soluciones que ofrecemos nuestro principal proveedor de licencias y partner es Compañia General de Sofware SRL con su línea de productos <span>ITRIS SOFTWARE.</span>
           <br />
           <br />
-          Con ellos tenemos una alianza estratégica que nos permite modelizar utilizando su herramienta y sus módulos estandar por lo que actuamos en ese caso utilizandolo como una <span>plataforma de desarrollo</span> que nos permite en un corto plazo ofrecer <span>proyectos a medida.</span>
+          Con ellos tenemos una alianza estratégica que nos permite modelizar utilizando su herramienta y sus módulos estándar por lo que actuamos en ese caso utilizándolo como una <span>plataforma de desarrollo</span> que nos permite en un corto plazo ofrecer <span>proyectos a medida.</span>
         </p>
+
         <div id={styles.circulo1} active={infoActive.toString()}></div>
         <div id={styles.circulo2} active={infoActive.toString()}></div>
       </div>
