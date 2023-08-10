@@ -53,8 +53,8 @@ const data = [
     parrOpen: [
       "Administración de fórmulas por artículo con procesos, subprocesos",
       "Estimaciones de planes de producción en función de ventas",
-      "Planes de Producción",
-      "Programaciones y partes",
+      "Partes de Producción",
+      "Programaciones",
       "Necesidad de Materia Prima para compras",
       "Trazabilidad"
     ]
