@@ -40,8 +40,9 @@
   
 
   .ulsli{
-    width: 25em;
     display: flex;
+    
+    padding-right: 2em;
     flex-direction: column;
   }
 
@@ -49,6 +50,9 @@
     padding: 7px;
     flex-grow: 1;
     padding-right: 1.4em;
+    min-width: 200px;
+    max-width: 500px;
+
 
   }
   

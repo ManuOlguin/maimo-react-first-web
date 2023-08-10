@@ -74,7 +74,7 @@ let wawa = 1;
     <article id={styles.tgroup_full_info}>
       <section id={styles.tgroup_info}>
         <div>
-          <h2 id={styles.Tgroup_title}>TGroup</h2>
+          <h2 id={styles.Tgroup_title}>TGROUP</h2>
           <h3>Tu mejor aliado estratégico</h3>
         </div>
         <div id={styles.loading_tgroup}>

@@ -10,23 +10,23 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import { faToolbox } from '@fortawesome/free-solid-svg-icons'
 
 
-
 const data = [
   {
     name: 'Gestión ERP',
-    parr: 'Ventas, compras, contratos, tesoreria, stock, credito personal, importaciones, contabilidad, integracion positiva y más!',
+    parr: 'Comercios, Servicios, Industrias, Empresas de Transporte, otros.',
     icon: faGear,
     color: styles.verde,
     isOpen: true,
     parrOpen: [
-      "Integración con sistema de gestión ERP",
-      "Actualización de stock",
-      "Precios",
-      "Carga de órdenes de pedido",
-      "Integraciones web con tiendas: Mercado Libre, Tienda nube, Woocommerce, Fulljause, Producteca",
-      "Integraciones con Paginas Web",
-      "Desarrollo App a medida"
-    ]
+      "VENTAS",
+      "COMPRAS",
+      "CONTRATOS",
+      "TESORERÍA",
+      "STOCK",
+      "CRÉDITO PERSONAL",
+      "IMPORTACIONES",
+      "CONTABILIDAD",
+      "INTEGRACIÓN IMPOSTIVIA"    ]
   },
   {
     name: 'Gestión E-Commerce',
@@ -46,7 +46,7 @@ const data = [
   },
   {
     name: 'Gestión de la Producción',
-    parr: 'Organizá tus procesos de producción facil y rapidamente',
+    parr: 'Organizá tus procesos de producción fácil y rapidamente',
     icon: faIndustry,
     color: styles.gris,
     isOpen: false,
@@ -61,22 +61,20 @@ const data = [
   },
   {
     name: 'Gestión Escuelas e Institutos Privados',
-    parr: 'Integración con sistema de gestión ERP',
+    parr: 'Agilizá las tareas administrativas con TGroup escuelas',
     icon: faGraduationCap,
     color: styles.azul,
     isOpen: false,
     parrOpen: [
-      "Administración de fórmulas por artículo con procesos, subprocesos",
-      "Estimaciones de planes de producción en función de ventas",
-      "Planes de Producción",
-      "Programaciones y partes",
-      "Necesidad de Materia Prima para compras",
-      "Trazabilidad"
+      "Emisión automática de facturas, talones de pago y recibos de aranceles",
+      "Carga de alumnos, cuotas y familias en un solo lugar",
+      "Gestión de cobranzas con seguimiento a través de avisos via mail",
+      "Procesos automáticos de cobro de cuotas a través de entidades de cobro (mercado pago, pago mis cuentas)"
     ]
   },
   {
     name: 'Gestión de Liquidación de Sueldos',
-    parr: 'Ventas, compras, contratos, tesoreria, stock, credito personal, importaciones, contabilidad, integracion positiva y más!',
+    parr: 'Administración de recursos humanos y recibos de haberes',
     icon: faCalculator,
     color: styles.verde,
     isOpen: false,
@@ -90,8 +88,8 @@ const data = [
     ]
   },
   {
-    name: 'Consultoria y Asesoramiento en Sistemas',
-    parr: 'Organizá tus procesos de producción facil y rapidamente',
+    name: 'Consultoria',
+    parr: ' Centro de capacitación y asesoramiento en Sistemas',
     icon: faLightbulb,
     color: styles.gris,
     isOpen: false,
@@ -104,16 +102,15 @@ const data = [
   },
   {
     name: 'Servicios de Desarrollo a Medida',
-    parr: 'Integración con sistema de gestión ERP',
+    parr: 'Creamos y diseñamos soluciones personalizadas para tu empresa',
     icon: faToolbox,
     color: styles.azul,
     isOpen: false,
     parrOpen: [
-      "Servicio de migración de datos",
-      "Diseño de informes a medida",
-      "Diseño de impresiones a medida",
-      "Integración con tiendas de ecommerce",
-      "Integración con otros sistemas de gestión y/o informáticos"
+      "Integración con otros sistemas de gestión y/o informáticos",
+      "Diseño de informes para la gestión",
+      "Diseño de impresiones y reportes",
+      "Integración con tiendas de ecommerce"
     ]
   }
 ];
