@@ -26,11 +26,11 @@ const data = [
       "CRÉDITO PERSONAL",
       "IMPORTACIONES",
       "CONTABILIDAD",
-      "INTEGRACIÓN IMPOSTIVA"    ]
+      "INTEGRACIÓN IMPOSITIVA"    ]
   },
   {
     name: 'Gestión E-Commerce',
-    parr: 'Integración con sistema de gestión ERP',
+    parr: 'Integración con tiendas y páginas web',
     icon: faStore,
     color: styles.azul,
     isOpen: false,
