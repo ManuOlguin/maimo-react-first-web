@@ -26,7 +26,7 @@ const data = [
       "CRÉDITO PERSONAL",
       "IMPORTACIONES",
       "CONTABILIDAD",
-      "INTEGRACIÓN IMPOSTIVIA"    ]
+      "INTEGRACIÓN IMPOSTIVA"    ]
   },
   {
     name: 'Gestión E-Commerce',
