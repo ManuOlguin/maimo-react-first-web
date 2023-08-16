@@ -154,7 +154,8 @@
     
   }
   @media (max-width: 800px) {
-
+    .ulsli{      
+      padding-right: 0;}
     .uls{
       margin-left: 1.2em;
     }

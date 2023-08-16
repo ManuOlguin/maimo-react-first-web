@@ -4,11 +4,13 @@ import styles from './Form.module.css';
 
 const Form = () => {
   return <section id={styles.form_contacto}>
-<form>
+<form
+        action="https://formspree.io/f/xbjvgedn"
+        method="POST">
     <h2>Contactanos</h2> 
-    <input type="text" placeholder="Nombre"/>
-    <input type="email" placeholder="Email"/>
-    <textarea id={styles.message} type="text" placeholder="Tu mensaje"/>
+    <input type="text" name='Nombre' placeholder="Nombre"/>
+    <input type="email" name='Email' placeholder="Email"/>
+    <textarea id={styles.message} name='Mensaje' type="text" placeholder="Tu mensaje"/>
     <button type="submit" class="btn btn-light">Enviar</button>
 </form>
 </section>

@@ -17,12 +17,20 @@
     padding-right: 5em;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
+    .footer{
+        flex-direction: column;
+    }
     #footer_links{
-        display: none;
+        padding-left: 0em;
+        border-left: none;
+        padding-top: 1em;
+        border-top: 2px solid #34AEA4;
+        font-size: 14px;
     }
     #footer_logo{
         padding-right: 0;
+        margin-bottom: 0.5em;
 
     }
 }
