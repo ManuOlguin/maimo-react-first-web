@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './CardsContainer.module.css';
 import Card from '../Card/Card'
-import { faGear, faL } from '@fortawesome/free-solid-svg-icons'
+import { faGear } from '@fortawesome/free-solid-svg-icons'
 import { faStore } from '@fortawesome/free-solid-svg-icons'
 import { faIndustry } from '@fortawesome/free-solid-svg-icons'
 import { faCalculator } from '@fortawesome/free-solid-svg-icons'
@@ -115,25 +115,13 @@ const data = [
   }
 ];
 
-function setAllIsOpenToFalse(data) {
-  return data.map(item => ({
-    ...item,
-    isOpen: false
-  }));
-}
-
 const CardsContainer = () => {
   const [cardsData, setCardsData] = useState(data);
+  const activeIndex = useRef(0);
 
   const handleCardClick = (index) => {
-    // Create a copy of the cardsData array to avoid directly mutating state
-    let updatedCardsData = [...cardsData];
-    updatedCardsData = setAllIsOpenToFalse(updatedCardsData);
-
-    // Toggle the "isOpen" property of the clicked card
-    updatedCardsData[index].isOpen = true;
-    // Update the state with the modified data
-    setCardsData(updatedCardsData);
+    activeIndex.current = index;
+    setCardsData((prev) => prev.map((item, i) => ({ ...item, isOpen: i === index })));
   };
 
   const handleScroll = () => {
@@ -148,7 +136,6 @@ const CardsContainer = () => {
     // Calculate the scroll percentage for each card
     const scrollTop = window.scrollY;
     const scrollBottom = scrollTop + containerHeight;
-    const screenWidth = window.innerWidth; // Get the current window width
   
     const cardScrollPercentages = cardHeights.map((height, index) => {
       const cardTop = cardOffsets[index];
@@ -156,44 +143,45 @@ const CardsContainer = () => {
   
       let visibleTop = Math.max(cardTop, scrollTop);
       let visibleBottom = Math.min(cardBottom, scrollBottom);
-  
-      // Adjust the visibleTop and visibleBottom for cards in the same row (screen width > 1600)
 
       return ((visibleBottom - visibleTop) / height) * 100;
     });
-    console.log(cardScrollPercentages)
   
     // Find the card with the highest scroll percentage and activate it
     const highestScrollPercentage = Math.max(...cardScrollPercentages);
     const cardIndexToActivate = cardScrollPercentages.indexOf(highestScrollPercentage);    
-    console.log(cardIndexToActivate)
     
-    if(window.innerWidth < 800)
-    {
+    // Solo re-renderizar cuando cambia la tarjeta activa
+    if (cardIndexToActivate !== activeIndex.current) {
       handleCardClick(cardIndexToActivate);
-
-    }
-    else{
-      handleCardClick(cardIndexToActivate);
-
     }
   };
   
 
     // Attach event listener for scroll events when the component mounts
+    // (como mucho un cálculo por frame)
     useEffect(() => {
-      window.addEventListener('scroll', handleScroll);
+      let frame = null;
+      const onScroll = () => {
+        if (frame) return;
+        frame = requestAnimationFrame(() => {
+          frame = null;
+          handleScroll();
+        });
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
   
       // Clean up the event listener when the component unmounts
       return () => {
-        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('scroll', onScroll);
+        if (frame) cancelAnimationFrame(frame);
       };
     }, []);
 
 
   return (
     <section id={styles.soluciones}>
-    <h2>Soluciones</h2>
+    <h2 data-reveal="">Soluciones</h2>
     <article id={styles.solucionesCards}>
     {cardsData.map((item, index) => (
         <Card
@@ -205,6 +193,7 @@ const CardsContainer = () => {
           color={item.color}
           onClick={() => handleCardClick(index)} // Pass the click event handler as a prop
           parrOpens={item.parrOpen}
+          index={index}
 
         />
       ))}

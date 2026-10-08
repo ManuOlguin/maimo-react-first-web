@@ -1,6 +1,8 @@
 #hero{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 2em;
   margin: 0 70px;
 
   margin-top: 3em;
@@ -13,40 +15,133 @@ h3{
   font-size: 36px;
 }
 
-#hero div{
+.heroText{
   width: 50em;
 }
 
-#hero div h1{
+.heroText > *{
+  animation: heroIn 1s var(--ease-out) both;
+}
+.heroText h1{ animation-delay: 0.15s; }
+.heroText h2{ animation-delay: 0.35s; }
+.heroText h3{ animation-delay: 0.55s; }
+
+.heroText h1{
   font-size: 60px;
   font-weight: 700;
-    margin-top: 0.2em;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-top: 0.2em;
 }
 
-#hero div h2{
+.gradientText{
+  font-weight: 700;
+  background-image: var(--tg-gradient);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: tg-gradient-flow 8s linear infinite;
+}
+
+.heroText h2{
   font-size: 48px;
   font-weight: 500;
   margin-top: 0.2em;
+  color: #34AEA4;
 
 }
 
-#hero div h3{
+.heroText h3{
   font-size: 32px;
   font-weight: 300;
   margin-top: 0.9em;
+  color: #4a4b5e;
 }
 
-#hero img{
+.heroVisual{
+  position: relative;
+  flex-shrink: 0;
+  width: 450px;
+  height: 450px;
+  animation: visualIn 1.2s var(--ease-out) 0.3s both;
+}
+
+.heroVisual img{
+  position: relative;
+  z-index: 2;
   width: 450px;
   height: 450px;
   border-radius: 50em 0 0 0 ;
+  box-shadow: var(--shadow-lg);
+  animation: float 9s ease-in-out infinite;
+}
+
+.blob{
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.55;
+}
+
+.blobTeal{
+  width: 320px;
+  height: 320px;
+  top: -40px;
+  left: -60px;
+  background: #94D9D3;
+  animation: drift 14s ease-in-out infinite;
+}
+
+.blobOrange{
+  width: 260px;
+  height: 260px;
+  bottom: -40px;
+  right: -40px;
+  background: #F5BAA6;
+  animation: drift 16s ease-in-out infinite reverse;
+}
+
+.dots{
+  position: absolute;
+  z-index: 1;
+  top: -28px;
+  right: -28px;
+  width: 180px;
+  height: 180px;
+  background-image: radial-gradient(rgba(52, 174, 164, 0.55) 1.5px, transparent 1.6px);
+  background-size: 16px 16px;
+  -webkit-mask-image: radial-gradient(circle at top right, #000 30%, transparent 72%);
+  mask-image: radial-gradient(circle at top right, #000 30%, transparent 72%);
+}
+
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(28px); filter: blur(6px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@keyframes visualIn {
+  from { opacity: 0; transform: translateX(40px) scale(0.96); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, 20px) scale(1.08); }
+  66% { transform: translate(-20px, 30px) scale(0.95); }
 }
 
 @media only screen and (max-width: 900px) {
-  #hero img {
+  .heroVisual {
     display: none;
   }
-  #hero div h2{
+  .heroText h2{
     text-align: right;
     margin-top: 0em;
 
@@ -55,23 +150,22 @@ h3{
 }
 
 @media only screen and (max-width: 600px) {
-  #hero div h2{
+  .heroText h2{
     text-align: right;
     margin-top: 0.25em;
     font-size: 34px;
 
 
-  }  
+  }
   #hero{
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 1em;
   }
-  #hero div h1{
+  .heroText h1{
     font-size: 40px;
   }
-  #hero div h3{
+  .heroText h3{
     font-size: 25px;
   }
 }
-

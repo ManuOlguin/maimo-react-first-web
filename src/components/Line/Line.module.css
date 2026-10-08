@@ -5,8 +5,11 @@
 .raya {
   width: 310px;
   height: 6px;
-  background-image: linear-gradient(to right, #94d9d3, #f5baa6, #a2b6b4);
+  background-image: linear-gradient(to right, #94d9d3, #f5baa6, #a2b6b4, #94d9d3);
+  background-size: 200% auto;
   border-radius: 5em;
+  box-shadow: 0 4px 16px -4px rgba(52, 174, 164, 0.55);
+  animation: tg-gradient-flow 6s linear infinite;
 }
 
 .divisorflex {

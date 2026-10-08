@@ -1,15 +1,57 @@
 #form_contacto{
     width: 550px;
+    position: relative;
+    overflow: hidden;
     background-color:#E2704B;
+    background-image: linear-gradient(135deg, #E28668 0%, #E2704B 60%, #d4613d 100%);
     padding: 2em;
     margin-top: 3em;
     border-radius: 0 5em 0 0;
     color: white;
-    transition: 1s;
+    box-shadow: var(--shadow-lg);
+    transition:
+      opacity 0.9s var(--ease-out),
+      translate 0.9s var(--ease-out),
+      border-radius 1s var(--ease-out);
+}
+
+/* Brillo decorativo */
+#form_contacto::before{
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    top: -160px;
+    right: -120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.28), transparent 65%);
+    pointer-events: none;
 }
 #form_contacto h2{
     color: white;
     font-weight: 500;
+}
+
+#form_contacto input,
+#form_contacto textarea{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 4px 14px -8px rgba(0, 0, 0, 0.35);
+    transition: box-shadow 0.3s var(--ease-out), transform 0.3s var(--ease-out), background-color 0.3s;
+}
+
+#form_contacto input::placeholder,
+#form_contacto textarea::placeholder{
+    color: #9a9aa6;
+}
+
+#form_contacto input:focus,
+#form_contacto textarea:focus{
+    outline: none;
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.55), 0 10px 24px -10px rgba(0, 0, 0, 0.45);
 }
 
 #form_contacto input{
@@ -32,7 +74,37 @@
     margin-left: 0.5em;
     width: 400px !important;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: #292A3B;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    box-shadow: 0 10px 22px -12px rgba(41, 42, 59, 0.9);
+    transition: transform 0.35s var(--ease-spring), box-shadow 0.35s;
 
+}
+
+#form_contacto button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.7s var(--ease-out);
+}
+
+#form_contacto button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 16px 28px -14px rgba(41, 42, 59, 1);
+}
+
+#form_contacto button:hover::before{
+    left: 120%;
 }
 
 #form_contacto textarea{

@@ -1,7 +1,10 @@
 .raya2{
   width: 100%;
   height: 20px;
-  background-image: linear-gradient(to right, #94D9D3, #F5BAA6, #A2B6B4);
+  background-image: linear-gradient(to right, #94D9D3, #F5BAA6, #A2B6B4, #94D9D3);
+  background-size: 200% auto;
+  transform-origin: left;
+  animation: tg-gradient-flow 10s linear infinite;
 margin-top: 3em;
 margin-bottom: 3.5em;
 

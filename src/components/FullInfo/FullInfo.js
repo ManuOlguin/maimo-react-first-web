@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './FullInfo.module.css';
 import myImage from './logotg.png';
-import $ from 'jquery';
-import { faL } from '@fortawesome/free-solid-svg-icons';
 
 const FullInfo = () => {
   const frasesLoading = [
@@ -73,11 +71,11 @@ let wawa = 1;
   return (
     <article id={styles.tgroup_full_info}>
       <section id={styles.tgroup_info}>
-        <div>
+        <div data-reveal="left">
           <h2 id={styles.Tgroup_title}>TGROUP</h2>
           <h3>Tu mejor aliado estratégico</h3>
         </div>
-        <div id={styles.loading_tgroup}>
+        <div id={styles.loading_tgroup} data-reveal="scale">
           <div id={styles.flex_tgroup_logo}>
             <div id={styles.background_logo} className={styles.rotate}>
               <canvas id="demo"></canvas>
@@ -92,7 +90,7 @@ let wawa = 1;
           </h4>
         </div>
       </section>
-      <section id={styles.botones_tgroup}>
+      <section id={styles.botones_tgroup} data-reveal="">
         <div id={styles.quienes_somos}>
           <a id={styles.infoActive1} active={infoActive.toString()} onClick={handleClick1}>
             <h5>¿Quienes somos?</h5>

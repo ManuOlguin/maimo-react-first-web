@@ -8,10 +8,13 @@ import Line2 from '../Line2/Line2';
 import FullInfo from '../FullInfo/FullInfo';
 import LastSections from '../LastSections/LastSections';
 import { Element } from 'react-scroll';
+import useReveal from '../../hooks/useReveal';
 
 
 
 const App = () => {
+  useReveal();
+
   return (
     <div className='App' styles="overflow-x: hidden;">
       <Header />

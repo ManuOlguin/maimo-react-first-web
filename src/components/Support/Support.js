@@ -3,7 +3,7 @@ import styles from './Support.module.css';
 
 
 const Support = () => {
-  return <section id={styles.support}>
+  return <section id={styles.support} data-reveal="right">
     <article>
       <div>
         <h4>¿Ya sos cliente?</h4>

@@ -3,7 +3,7 @@ import styles from "./Line2.module.css";
 
 const Line2 = () => {
   return (
-    <div className={styles.raya2}></div>
+    <div className={styles.raya2} data-reveal="line"></div>
   );
 };
 

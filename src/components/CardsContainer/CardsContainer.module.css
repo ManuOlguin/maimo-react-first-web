@@ -14,6 +14,7 @@
   text-align: center;
   font-size: 40px;
   font-weight: 700;
+  letter-spacing: -0.01em;
   margin-bottom: 1em;
 }
 
@@ -31,15 +32,18 @@
 
 .verde{
   background-color: #34AEA4;
+  background-image: linear-gradient(135deg, #45BDB3 0%, #34AEA4 55%, #2A8F87 100%);
   color: white;
 }
 .azul{
   background-color: #222335;
+  background-image: linear-gradient(135deg, #30324a 0%, #222335 55%, #191a28 100%);
   color: white;
 
 }
 .gris{
   background-color: #E2E2E2;
+  background-image: linear-gradient(135deg, #F0F2F2 0%, #E2E2E2 60%, #D6DCDB 100%);
 }
 
 .verde div article ul li, .azul div article ul li{
