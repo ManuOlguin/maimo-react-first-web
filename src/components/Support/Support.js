@@ -17,13 +17,13 @@ const Support = () => {
         <a href='http://tickets.tgroup.com.ar'>http://tickets.tgroup.com.ar</a><br></br>
         Atendemos de Lunes a Viernes de 08 a 17 hs, exclusivamente por esta vía.</p>
         <p id={styles.segundoTexto}><span>GUARDIA</span> <br></br>
-          <bold>Solo en caso de emergencia (no poder facturar o no poder usar el sistema)
-          Sólo a través de llamado telefónico.</bold>
+          <bold>Sólo en caso de emergencia (no poder facturar o no poder usar el sistema)
+          por WhatsApp o llamado telefónico.</bold>
           <br></br>
-          Lun. a Vie. de 17 a 20:30 hs
-          Sábados de 08 a 20:30 hs.
+          Lun. a Vie. de 17 a 21 hs
+          Sábados de 09 a 21 hs.
           <br></br>
-          Cel. 011 15 3570 1310</p>
+          Cel. 011 3397 5660</p>
     </div>
 </section>
 };
