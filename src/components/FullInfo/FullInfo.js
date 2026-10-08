@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import styles from './FullInfo.module.css';
 import myImage from './logotg.png';
 
+const frasesLoading = [
+  "Trabajando para vos",
+  "Implementando nuevas soluciones",
+  "Respondiendo tickets",
+  "Diseñando nuevos productos",
+  "Asesorando empresas"
+];
+
 const FullInfo = () => {
-  const frasesLoading = [
-    "Trabajando para vos",
-    "Implementando nuevas soluciones",
-    "Respondiendo tickets",
-    "Diseñando nuevos productos",
-    "Asesorando empresas"
-  ];
-  
   let [posicionActual, setPosicionActual] = useState(0);
   let [puntos, setPuntos] = useState(1);
   let [puntos2, setPuntos2] = useState(2);
@@ -20,9 +20,9 @@ const FullInfo = () => {
   const [desaparecer1, setDesaparecer1] = useState(true);
   const [desaparecer2, setDesaparecer2] = useState(true);
 
-let wawa = 1;
-
   useEffect(() => {
+    let wawa = 1;
+
     const intervalId = setInterval(() => {
       setPosicionActual((prevPosicion) => (prevPosicion + 1)   % frasesLoading.length);
     }, 10000);
@@ -92,16 +92,16 @@ let wawa = 1;
       </section>
       <section id={styles.botones_tgroup} data-reveal="">
         <div id={styles.quienes_somos}>
-          <a id={styles.infoActive1} active={infoActive.toString()} onClick={handleClick1}>
+          <button type="button" id={styles.infoActive1} active={infoActive.toString()} onClick={handleClick1}>
             <h5>¿Quienes somos?</h5>
             <div></div>
-          </a>
+          </button>
         </div>
         <div id={styles.socios_estrategicos}>
-          <a id={styles.infoActive2} active={infoActive.toString()} onClick={handleClick2}>
+          <button type="button" id={styles.infoActive2} active={infoActive.toString()} onClick={handleClick2}>
             <h5>Socios Estrategicos</h5>
             <div></div>
-          </a>
+          </button>
         </div>
       </section>
       <div id={styles.textoInfo}>

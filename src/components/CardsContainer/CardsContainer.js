@@ -176,6 +176,8 @@ const CardsContainer = () => {
         window.removeEventListener('scroll', onScroll);
         if (frame) cancelAnimationFrame(frame);
       };
+      // handleScroll sólo usa refs y setState: no hace falta re-suscribir
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 

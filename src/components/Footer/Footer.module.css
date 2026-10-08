@@ -28,7 +28,8 @@
     transform: scale(1.05);
 }
 
-#footer_links a{
+#footer_links a,
+#footer_links span{
     text-decoration: none;
     line-height: 1.8;
 }

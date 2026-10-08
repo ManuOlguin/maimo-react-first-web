@@ -95,7 +95,7 @@ canvas {
   transition: color 0.4s var(--ease-out), transform 0.4s var(--ease-out);
 
 }
-#quienes_somos a div{
+#quienes_somos button div{
   margin-top: 1em;
   width: 44vw;
 
@@ -107,7 +107,7 @@ canvas {
   transition: background-color 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
 }
 
-#quienes_somos a{
+#quienes_somos button{
   text-decoration: none;
 }
 
@@ -117,7 +117,7 @@ canvas {
   font-weight: 500;
   transition: color 0.4s var(--ease-out), transform 0.4s var(--ease-out);
 }
-#socios_estrategicos a div{
+#socios_estrategicos button div{
   margin-top: 1em;
   width: 44vw;
   height: 9px;
@@ -128,16 +128,21 @@ canvas {
   transition: background-color 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
 }
 
-#quienes_somos a, #socios_estrategicos a{
+#quienes_somos button, #socios_estrategicos button{
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  text-align: left;
 }
 
-#quienes_somos a:hover h5, #socios_estrategicos a:hover h5{
+#quienes_somos button:hover h5, #socios_estrategicos button:hover h5{
   color: #9EB0AF;
   transform: translateX(4px);
 }
 
-#socios_estrategicos a{
+#socios_estrategicos button{
   text-decoration: none;
 }
 
@@ -319,7 +324,7 @@ canvas {
   color: #34AEA4;
 }
 
-#quienes_somos a{
+#quienes_somos button{
   text-decoration: none;
 }
 
@@ -366,14 +371,14 @@ canvas {
     margin-left: 0;
   }
 
-  #quienes_somos a, #socios_estrategicos a {
+  #quienes_somos button, #socios_estrategicos button {
     display: flex;
     flex-direction: row-reverse;
     justify-content: left;
     margin-bottom: 1em;
     
   }
-  #socios_estrategicos a div, #quienes_somos a div{
+  #socios_estrategicos button div, #quienes_somos button div{
     margin-top: 0;
     width: 10px;
     height: 50px;
@@ -400,7 +405,7 @@ canvas {
 }
 
 @media only screen and (max-width: 350px) {
-  #socios_estrategicos a div, #quienes_somos a div{
+  #socios_estrategicos button div, #quienes_somos button div{
     margin-top: 0;
     width: 10px;
     height: 80px;

@@ -50,7 +50,7 @@ const Card = ({key, isOpen, name, parr, icon, color, onClick, parrOpens, index =
     >
       <div className={styles.cardSolucion}>
         <div><FontAwesomeIcon className={styles.iconoCard} icon={icon} /></div>
-        <a className={styles.btnCard}>{isOpen ? "TGROUP" : "Ver más"}</a>
+        <span className={styles.btnCard}>{isOpen ? "TGROUP" : "Ver más"}</span>
         <h4>{name}</h4>
         <p >{parr}</p>
         <article className={styles.uls}>

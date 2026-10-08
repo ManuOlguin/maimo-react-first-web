@@ -11,7 +11,7 @@ const Footer = () => {
                     </a>
             </div>
             <div id={styles.footer_links}>
-                <a styles="font-weight: 500;">Polo empresarial K41, Avenida Gaona 11024, Of. 309 B, Fransico Alverez, Provincia de Buenos Aires</a>
+                <span>Polo empresarial K41, Avenida Gaona 11024, Of. 309 B, Fransico Alverez, Provincia de Buenos Aires</span>
                 <a href="mailto:contacto@tgroup.com.ar">contacto@tgroup.com.ar</a>
             </div>
         </footer>
